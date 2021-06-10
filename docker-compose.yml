@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  test:
+    image: "test"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      # - data:/app/data
+      - ./data:/app/data
+    networks:
+      - test
+    # environment:
+    #   - DEBUG=1
+    # env_file:
+      # - compose.env
+    # depends_on:
+    #   - service
+    # restart: always
+# volumes:
+#   data: 
+networks:
+  test:
