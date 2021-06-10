@@ -1,6 +1,6 @@
 node{
   stage('test'){
-    git 'git@github.com:StavBenSimchon/ci-test.git' 'develop'
+    git url:'git@github.com:StavBenSimchon/ci-test.git', branch:'develop'
     sh '''
       echo test
     '''
